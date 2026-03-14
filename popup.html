@@ -1,51 +1,87 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <style>
+        :root {
+            --primary: #2c3e50;
+            --bg: #ffffff;
+            --border: #edf2f7;
+            --text: #4a5568;
+        }
         body {
-            width: 600px;
-            /* INCREASED WIDTH */
-            font-family: sans-serif;
-            padding: 15px;
-            color: #333;
+            width: 550px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text);
         }
-
-        h3 {
-            font-size: 16px;
-            margin: 0 0 10px 0;
-            text-align: center;
-        }
-
         #chart-container {
             width: 100%;
-            height: 260px;
+            height: 320px;
+            margin-bottom: 15px;
         }
-
         #stats-summary {
-            margin-top: 15px;
-            padding-top: 10px;
-            border-top: 1px solid #eee;
             display: flex;
             justify-content: space-around;
-            /* Put stats side-by-side */
-            font-size: 14px;
-            color: #444;
+            padding: 15px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 15px;
         }
-
-        #stats-summary strong {
-            color: #2c3e50;
+        .stat-item {
+            text-align: center;
+        }
+        .stat-value {
+            display: block;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .stat-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #a0aec0;
+        }
+        #download-btn {
+            width: 100%;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        #download-btn:hover {
+            background-color: #34495e;
         }
     </style>
     <script src="js/chart.js"></script>
 </head>
-
 <body>
     <div id="chart-container">
         <canvas id="gradeChart"></canvas>
     </div>
-    <div id="stats-summary"></div>
+    <div id="stats-summary">
+        <div class="stat-item">
+            <span class="stat-label">Avg Grade</span>
+            <span id="avg-grade" class="stat-value">--</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Avg Quality</span>
+            <span id="avg-quality" class="stat-value">--</span>
+        </div>
+    </div>
+    <button id="download-btn">
+        <span>Download PNG for Illustrator</span>
+    </button>
     <script src="popup.js"></script>
 </body>
-
 </html>
