@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     chrome.tabs.sendMessage(tab.id, { action: "getStats" }, (response) => {
         if (!response || response.error) return;
-
+        console.log(response);
         // 1. Data Processing
         const fixedLabels = [];
         for (let i = 10; i <= 35; i++) { fixedLabels.push(i.toString()); }
