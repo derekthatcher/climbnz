@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            width: 600px;
+            /* INCREASED WIDTH */
+            font-family: sans-serif;
+            padding: 15px;
+            color: #333;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin: 0 0 10px 0;
+            text-align: center;
+        }
+
+        #chart-container {
+            width: 100%;
+            height: 260px;
+        }
+
+        #stats-summary {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-around;
+            /* Put stats side-by-side */
+            font-size: 14px;
+            color: #444;
+        }
+
+        #stats-summary strong {
+            color: #2c3e50;
+        }
+    </style>
+    <script src="js/chart.js"></script>
+</head>
+
+<body>
+    <div id="chart-container">
+        <canvas id="gradeChart"></canvas>
+    </div>
+    <div id="stats-summary"></div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
