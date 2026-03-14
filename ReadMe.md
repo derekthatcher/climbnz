@@ -2,6 +2,8 @@
 
 A Chrome extension for [climbnz.org.nz](https://climbnz.org.nz) that calculates average grades, quality ratings, and displays a color-coded grade distribution chart.
 
+Navigate to a crag view page, and click the extension to get a popup.
+
 ## Features
 - **Visual Grade Distribution:** A bar chart showing the count of climbs from Grade 10 to 35.
 - **Color Coding:** - Green (<20)
@@ -18,5 +20,5 @@ A Chrome extension for [climbnz.org.nz](https://climbnz.org.nz) that calculates 
 5. Navigate to any crag page on ClimbNZ to see the stats!
 
 ## Credits
-- Built for the New Zealand climbing community.
+- Built with generious help from Gemini.
 - Uses [Chart.js](https://www.chartjs.org/) for data visualization.
