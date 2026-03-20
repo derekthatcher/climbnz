@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
             totalClimbs += count;
             return count;
-        });
+        });   
 
         // 2. UI Updates
         document.getElementById('avg-grade').textContent = response.avgGrade;
@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         // 3. Chart Rendering
         const barColors = fixedLabels.map(label => {
             const g = parseInt(label);
-            if (g < 20) return '#48bb78'; // Modern Green
-            if (g <= 24) return '#ed8936'; // Modern Orange
-            if (g <= 29) return '#f56565'; // Modern Red
-            return '#9f7aea';             // Modern Purple
+            if (g < 20) return '#689247'; // Modern Green
+            if (g <= 24) return '#4670B3'; // Modern Orange
+            if (g <= 29) return '#CB4E3D'; // Modern Red
+            return '#3A3A3B';             // Modern Purple
         });
 
         const ctx = document.getElementById('gradeChart').getContext('2d');
